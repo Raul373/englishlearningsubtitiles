@@ -646,8 +646,8 @@ Seleccionar Archivo
 <button class="vocab-tab active" onclick="showVocabTab('verbs', this)">Verbos</button>
 <button class="vocab-tab" onclick="showVocabTab('adjectives', this)">Adjetivos / Adverbios</button>
 <button class="vocab-tab" onclick="showVocabTab('phrasalVerbs', this)">Phrasal Verbs</button>
-<button class="vocab-tab" onclick="showVocabTab('items', this)">Objetos Físicos</button>
-<button class="vocab-tab" onclick="showVocabTab('slangs', this)">Slangs /Coloquial</button>
+<button class="vocab-tab" onclick="showVocabTab('items', this)">Sustantivos</button>
+<button class="vocab-tab" onclick="showVocabTab('slangs', this)">Slangs / Frases</button>
 </div>
 <div class="vocab-content active" id="verbs"></div>
 <div class="vocab-content" id="adjectives"></div>
@@ -1054,7 +1054,7 @@ RULES:
 1. "verbs": ALL verbs found, converted to BASE FORM / INFINITIVE (e.g., "went" -> "go", "running" -> "run", "has eaten" -> "eat"). Lowercase, deduplicated.
 2. "adjectives": ALL adjectives AND ALL adverbs found (adverbs on purpose: words like "quickly", "very", "never", "suddenly"), in base form, lowercase, deduplicated. Normalize comparatives/superlatives ("bigger" -> "big").
 3. "phrasalVerbs": ONLY true phrasal verbs that actually appear in the text, in base form (e.g., "gave up" -> "give up", "looking for" -> "look for"). Do NOT invent any that are not present.
-4. "items": ONLY concrete, tangible, physical objects you can touch (ball, window, lamp, table, car, phone, sword...). Singular, lowercase, deduplicated. STRICTLY EXCLUDE abstract concepts (love, freedom, idea, time, hope, problem, way, thing, life), places, person names and organizations.
+4. "items": ALL common nouns found, both concrete and abstract (ball, window, table, car, love, idea, time, problem, life...). Singular, lowercase, deduplicated. Do NOT include proper nouns (person names, place names, organizations, brands) or pronouns.
 5. "slangs": slang words and informal, everyday expressions that people actually use in casual conversation with friends or family. Include: informal contractions (gonna, wanna, gotta, kinda, lemme), interjections (yeah, wow, geez, damn), casual address words (dude, bro, buddy, man), colloquial intensifiers and mild swear words if present, and informal idiomatic phrases ("what's up", "no way", "my bad", "piece of cake", "come on"). Lowercase, deduplicated, in citation/base form (e.g., "freaked out" -> "freak out"). ONLY expressions that genuinely appear in the text. Do NOT include standard formal vocabulary.
 6. Every entry must appear only ONCE in its list. Never repeat an entry, and stop as soon as each list is complete.
 
